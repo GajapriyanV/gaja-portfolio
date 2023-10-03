@@ -1,113 +1,147 @@
+"use client"
 import Image from 'next/image'
+import { Separator } from "@/components/ui/separator"
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { Disclosure, Transition } from "@headlessui/react";
+import {MdKeyboardArrowDown} from "react-icons/md";
+import {CiFolderOn} from "react-icons/ci";
+import {AiOutlineGithub, AiFillLinkedin, AiOutlineInstagram, AiOutlineTwitter, AiOutlineMail} from "react-icons/ai"
+import { experiences, projects } from '@/lib/info';
+import Link from 'next/link';
+import { ParticlesBackground } from '@/components/ui/Particles';
+import Main from '@/components/Main';
+import { useCallback } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+import Particles from "react-tsparticles";
+//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+
+
+
+
+
 
 export default function Home() {
+
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+  
+    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    //await loadFull(engine);
+    await loadSlim(engine);
+  }, []);
+  
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    await console.log(container);
+  }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    
+      
+
+    <main className=''>
+      <Main/>
+      <div className='w-[90%] md:w-[1165px] mx-auto'>
+      <h2 className='text-center md:text-start text-5xl font-bold mb-8'>Experiences</h2>
+        <div className='flex flex-col items-center gap-5 mb-12'>
+
+          {experiences.map((experience, i) =>(
+
+            <Disclosure key ={`item-${i}`}>
+                      
+            <div  className='flex flex-col w-full flex-1 rounded-lg border-2 border-slate-700 hover:border-white transition-colors duration-150 p-4'>
+              <p className='italic text-sm opacity-50 mb-2'>{experience.date}</p>
+              
+              <Disclosure.Button className='flex w-full justify-between items-center'>
+                <div className='flex items-center gap-2'>
+                  <div>
+                  <Image
+                          alt={experience.company}
+                          width={40}
+                          height={40}
+                          className="rounded"
+                          src={experience.logo}
+                        />
+                  </div>
+                  <div>
+                    <p className='font-semibold md:text-xl text-start'>{experience.company}</p>
+                    <p className='md:hidden opacity-50 text-m'>{experience.role}</p>
+                    
+                  </div>
+                  
+                </div>
+                <div className='flex items-center gap-2'>
+                  <p className='hidden md:block font-semibold opacity-50 md:text-xl'>{experience.role}</p>
+                  <span className='text-xl'><MdKeyboardArrowDown/></span>
+                  
+                </div>
+              </Disclosure.Button>
+              
+              <Transition
+              enter="transition duration-200 ease-out"
+              enterFrom="transform scale-95 opacity-0"
+              enterTo="transform scale-100 opacity-100"
+              >
+              <Disclosure.Panel className='border-l-[2px] ml-[50px] mt-2 pl-[10px] opacity-50 w-[75%]'>
+                <p className='text-sm'>{experience.desc} </p>
+
+              </Disclosure.Panel>
+              </Transition>
+              
+
+              
+            </div>
+            </Disclosure>
+            
+          ))}
+          
+          
+        </div>
+        
+      </div>
+      <div className='w-[90%] md:w-[1165px] mx-auto mb-10'>
+        <h2 className='text-center md:text-start text-5xl font-bold mb-10'>Projects</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
+          
+          {projects.map((project, id) => (
+            <div key={id} className='flex flex-col flex-1 rounded-md border-2 border-slate-700 hover:border-white transition-transform duration-300 p-4 hover:scale-105'>
+            <div className='flex items-center justify-between mb-2'>
+              <CiFolderOn size={50}/>
+              <Link href="https://www.instagram.com/?hl=en"><span className='hover:opacity-50 transition-colors'><AiOutlineGithub size={25}/></span></Link>
+              
+            </div>
+            <div className='flex flex-col'>
+              <p className='font-semibold md:text-xl mb-1'>{project.title}</p>
+              <p className='opacity-50'>{project.desc}</p>
+              
+            </div>
+          </div>
+          ))}
+  
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <div className='w-[90%] md:w-[1165px] mx-auto'>
+        
+          <div className='flex items-center justify-between w-full pb-12 border-t opacity-50 pt-6'>
+            <p className='text-sm'> © Gajapriyan Vigneswaran 2023</p>
+            <div className='flex items-center gap-2'>
+              <AiOutlineGithub size={25}/>
+              <AiOutlineTwitter size={25}/>
+              <AiOutlineMail size={25}/>
+              <AiFillLinkedin size={25}/>
+              <AiOutlineInstagram size={25}/>
+          </div>
+          
+        </div>
+          
+      </div>  
+      
+      
+      
     </main>
+
+
   )
 }
