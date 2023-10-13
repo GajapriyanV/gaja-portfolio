@@ -10,8 +10,10 @@ import { experiences, projects } from '@/lib/info';
 import Link from 'next/link';
 import { ParticlesBackground } from '@/components/ui/Particles';
 import Main from '@/components/Main';
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import type { Container, Engine } from "tsparticles-engine";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
@@ -36,6 +38,13 @@ export default function Home() {
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
     await console.log(container);
   }, []);
+
+  useEffect(() => {
+    AOS.init({
+         duration: 250,
+         once: false,
+       })
+ }, [])
   return (
     
       

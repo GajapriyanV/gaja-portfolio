@@ -1,10 +1,9 @@
 
-
 import React from 'react'
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { ParticlesBackground } from '@/components/ui/Particles';
 import { Separator } from "@/components/ui/separator"
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
@@ -18,7 +17,12 @@ type Props = {}
 
 const Main = (props: Props) => {
 
-    
+
+    const [typewriterVisible, setTypewriterVisible] = useState(false);
+
+  useEffect(() => {
+    setTypewriterVisible(true);
+  }, []);
 
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
@@ -34,14 +38,16 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
     await console.log(container);
 }, []);
 
+
+
+
   return (
-
-
 
           <div className='flex flex-col-reverse w-full mx-auto min-h-screen max-h-screen mb-8 relative'>
           
             
             <div className='absolute w-full h-full  -z-50'>
+              {typewriterVisible && (
               <Particles
                   id="tsparticles"
                   init={particlesInit}
@@ -90,7 +96,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                                   default: "bounce",
                               },
                               random: false,
-                              speed: 6,
+                              speed: 2,
                               straight: false,
                           },
                           number: {
@@ -98,7 +104,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                                   enable: true,
                                   area: 800,
                               },
-                              value: 10,
+                              value: 12,
                           },
                           opacity: {
                               value: 0.5,
@@ -113,16 +119,17 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                       detectRetina: true,
                   }}
               />
+              )}
             </div>
             <div className='flex flex-col md:flex-row absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
             {/* This is the Div With My name */}
             <div className='flex flex-col md:border-r md:pr-5 md:whitespace-nowrap'>
-              <h2 className=' text-center text-5xl font-bold mb-2'>Gajapriyan Vigneswaran</h2>
-              <p className={` text-center md:text-start text-m opacity-50 mb-3 md:mb-2`}>
+              <h2 className=' text-center md:text-left text-5xl font-bold mb-2'>Gajapriyan Vigneswaran</h2>
+              <p className={` text-center md:text-start text-m opacity-50 mb-3 md:mb-2 h-7 md:h-5`}>
                 
                 <span>
-                    
-                    <Typewriter
+                {typewriterVisible && (
+                <Typewriter
                 options={{ loop: true }}
                 onInit={(typewriter) => {
                     
@@ -136,14 +143,24 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                     
                 }}
                 />
+                )}
                 </span>
               </p>
               <div className="flex h-5 items-center  space-x-4 md:text-sm justify-center md:justify-start mb-2">
-                <div>Resume</div>
+              <div className="relative cursor-pointer group">
+    <span className="hover:underline">Resume</span>
+    <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
+  </div>
                 <Separator orientation="vertical" />
-                <div>Github</div>
+                <div className="relative cursor-pointer group">
+    <span className="hover:underline">Github</span>
+    <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
+  </div>
                 <Separator orientation="vertical" />
-                <div>Socials</div>
+                <div className="relative cursor-pointer group">
+    <span className="hover:underline">Socials</span>
+    <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
+  </div>
               </div>
             </div>
             <Separator className='md:hidden' orientation="horizontal" />
