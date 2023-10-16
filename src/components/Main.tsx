@@ -1,7 +1,6 @@
 
 import React from 'react'
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-import { ParticlesBackground } from '@/components/ui/Particles';
 import { Separator } from "@/components/ui/separator"
 import { useCallback, useEffect, useState } from "react";
 import type { Container, Engine } from "tsparticles-engine";

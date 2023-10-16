@@ -8,7 +8,6 @@ import {CiFolderOn} from "react-icons/ci";
 import {AiOutlineGithub, AiFillLinkedin, AiOutlineInstagram, AiOutlineTwitter, AiOutlineMail} from "react-icons/ai"
 import { experiences, projects } from '@/lib/info';
 import Link from 'next/link';
-import { ParticlesBackground } from '@/components/ui/Particles';
 import Main from '@/components/Main';
 import { useCallback, useEffect } from "react";
 import type { Container, Engine } from "tsparticles-engine";
