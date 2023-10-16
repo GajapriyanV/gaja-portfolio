@@ -52,12 +52,12 @@ export default function Home() {
     <main className=''>
       <Main/>
       <div className='w-[90%] md:w-[1165px] mx-auto'>
-      <h2 className='text-center md:text-start text-5xl font-bold mb-8'>Experiences</h2>
+      <h2 className='text-center md:text-start text-5xl font-bold mb-8' data-aos="fade-up">Experiences</h2>
         <div className='flex flex-col items-center gap-5 mb-12'>
 
           {experiences.map((experience, i) =>(
 
-            <Disclosure key ={`item-${i}`}>
+            <Disclosure key ={`item-${i}`} data-aos="fade-up">
                       
             <div  className='flex flex-col w-full flex-1 rounded-lg border-2 border-slate-700 hover:border-white transition-colors duration-150 p-4'>
               <p className='italic text-sm opacity-50 mb-2'>{experience.date}</p>
@@ -110,15 +110,14 @@ export default function Home() {
         
       </div>
       <div className='w-[90%] md:w-[1165px] mx-auto mb-10'>
-        <h2 className='text-center md:text-start text-5xl font-bold mb-10'>Projects</h2>
+        <h2 className='text-center md:text-start text-5xl font-bold mb-10' data-aos="fade-up">Projects</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
           
           {projects.map((project, id) => (
-            <div key={id} className='flex flex-col flex-1 rounded-md border-2 border-slate-700 hover:border-white transition-transform duration-300 p-4 hover:scale-105'>
+            <div key={id} data-aos={id % 2 === 0 ? "fade-right" : "fade-left"} className='flex flex-col flex-1 rounded-md border-2 border-slate-700 hover:border-white hover:scale-105 transition-transform duration-300 p-4'>
             <div className='flex items-center justify-between mb-2'>
               <CiFolderOn size={50}/>
-              <Link href="https://www.instagram.com/?hl=en"><span className='hover:opacity-50 transition-colors'><AiOutlineGithub size={25}/></span></Link>
-              
+              <Link href={project.link}><span className='hover:opacity-50 transition-colors'><AiOutlineGithub size={25}/></span></Link>
             </div>
             <div className='flex flex-col'>
               <p className='font-semibold md:text-xl mb-1'>{project.title}</p>
@@ -136,11 +135,11 @@ export default function Home() {
           <div className='flex items-center justify-between w-full pb-12 border-t opacity-50 pt-6'>
             <p className='text-sm'> © Gajapriyan Vigneswaran 2023</p>
             <div className='flex items-center gap-2'>
-              <AiOutlineGithub size={25}/>
-              <AiOutlineTwitter size={25}/>
-              <AiOutlineMail size={25}/>
-              <AiFillLinkedin size={25}/>
-              <AiOutlineInstagram size={25}/>
+              <Link href="https://github.com/GajapriyanV"><AiOutlineGithub size={25}/></Link>
+              <Link href="https://twitter.com/home"><AiOutlineTwitter size={25}/></Link>
+              <Link href="mailto:gajapriyan.v@gmail.com"><AiOutlineMail size={25}/></Link>
+              <Link href="https://www.linkedin.com/in/gajapriyan-vigneswaran-8b5072225/"><AiFillLinkedin size={25}/></Link>
+              <Link href="https://www.instagram.com/gajapriyan.15/?hl=en"><AiOutlineInstagram size={25}/></Link>
           </div>
           
         </div>

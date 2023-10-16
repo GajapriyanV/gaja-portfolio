@@ -10,6 +10,7 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import Typewriter from "typewriter-effect";
 import { typewriterText } from '@/lib/info';
+import Link from 'next/link';
 
 type Props = {}
 
@@ -43,7 +44,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
 
   return (
 
-          <div className='flex flex-col-reverse w-full mx-auto min-h-screen max-h-screen mb-8 relative'>
+          <div className='flex flex-col-reverse w-full mx-auto min-h-screen max-h-screen mb-8 relative' data-aos="fade-in">
           
             
             <div className='absolute w-full h-full  -z-50'>
@@ -104,7 +105,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                                   enable: true,
                                   area: 800,
                               },
-                              value: 12,
+                              value: 13,
                           },
                           opacity: {
                               value: 0.5,
@@ -147,20 +148,27 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                 </span>
               </p>
               <div className="flex h-5 items-center  space-x-4 md:text-sm justify-center md:justify-start mb-2">
-              <div className="relative cursor-pointer group">
+    <Link href="/your-resume-page">
+    <div className="relative cursor-pointer group">
     <span className="hover:underline">Resume</span>
     <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
   </div>
+  </Link>
+
                 <Separator orientation="vertical" />
-                <div className="relative cursor-pointer group">
+    <Link href="https://github.com/GajapriyanV">
+    <div className="relative cursor-pointer group">
     <span className="hover:underline">Github</span>
     <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
   </div>
+  </Link>
                 <Separator orientation="vertical" />
-                <div className="relative cursor-pointer group">
+    <Link href="https://www.linkedin.com/in/gajapriyan-vigneswaran-8b5072225/">
+    <div className="relative cursor-pointer group">
     <span className="hover:underline">Socials</span>
     <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
   </div>
+  </Link>
               </div>
             </div>
             <Separator className='md:hidden' orientation="horizontal" />
@@ -169,7 +177,13 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
               I am currently a second year student  at Carleton University studying Computer Science. I am always exploring new  and enriching techonologies to enhance my work. Learn more about me below! </p>
             </div>   
             </div>
-            <div className='flex items-center justify-center mb-28 md:mb-15 text-3xl animate-bounce'>
+            <div className='flex items-center justify-center mb-28 md:mb-15 text-3xl animate-bounce' onClick={() =>
+          window.scrollBy({
+            left: 0,
+            top: 0.95 * window.innerHeight,
+            behavior: "smooth",
+          })
+        }>
               <MdKeyboardDoubleArrowDown/>
             </div>
         </div>

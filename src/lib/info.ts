@@ -1,5 +1,7 @@
 export const typewriterText = [
     "Software Engineer.",
+    "Data Scientist.",
+    "DevOps Engineer.",
     "Full-Stack Developer.",
     "Inertia Co-Founder",
     "Tech Enthusiast.",
@@ -22,6 +24,13 @@ export const experiences = [
         desc: "As the lead developer, I spearheaded the successful development of the Prom Planner application's dashboard, harnessing the power of HTML, CSS, Javascript, PHP, VueJS, NodeJS and Mongo DB. My adept utilization of these advanced technologies resulted in an exceptionally user-friendly and sophisticated platform, empowering prom planners to effortlessly manage their activities and track transactions.",
     },
     {
+        date: "February 2022 - Present",
+        logo: "/assets/inertia.png",
+        company: "Inertia",
+        role: "Co-Founder/Developer",
+        desc: "As a co-founder of Inertia, I held the positions of Lead Developer and Technical Product Manager. Responsibilities included leading development, designing and implementing software products and systems, and overseeing website development. I also managed marketing and branding initiatives across various channels.",
+    },
+    {
         date: "November 2021 - January 2022",
         logo: "/assets/annamalai.png",
         company: "Annamalai",
@@ -42,49 +51,49 @@ export const projects = [
     {
         title: "HireMe",
         desc: "A full-stack application marketplace, where customers can conveniently sign in and access a wide array of job listings from skilled entrepreneurs. Engage in seamless communication with the entrepreneurs to ensure your specific needs are met. Plus, experience the convenience of making payments for the services, all within a single application",
-        link: "",
+        link: "https://github.com/GajapriyanV?tab=repositories",
     },
 
     {
         title: "ArtifyAI",
         desc: "Compose thought-provoking prompts, and witness OpenAI's cutting-edge algorithms bring your ideas to life with mesmerizing AI-generated drawings. Share your work and dive into the community section to browse an abundance of AI-powered artworks",
-        link: "",
+        link: "https://github.com/GajapriyanV?tab=repositories",
     },
     {
         title: "LiveNote",
         desc: "An all-inclusive application employing Redux, RTK Query, Authentication, and JWT web tokens to empower employees and admins with seamless login and full control over CRUD operations. Efficiently manage incoming order tickets and customer information through a unified platform.",
-        link: "",
+        link: "https://github.com/GajapriyanV/LiveNotes",
     },
     {
         title: "GoTrainer",
         desc: "Introducing a dynamic web application that empowers users to select exercise categories and target specific muscle groups. Explore a vast collection of exercises equipped with video instructions and similar workouts, enabling users to optimize and craft their perfect workout routine.",
-        link: "",
+        link: "https://github.com/GajapriyanV/React-Gym-App",
     },
     {
         title: "Spotify 2.0",
         desc: "Experience a fully revamped homepage of the Spotify web app, meticulously crafted with React, Redux, Tailwind, and other cutting-edge technologies. Immerse yourself in the Spotify-like ambiance, relishing a feature-rich music player, global charts, and seamless search capabilities for songs, artists, and lyrics of your preference.",
-        link: "",
+        link: "https://github.com/GajapriyanV/Spotify-2.0",
     },
 
     {
         title: "Voice-Prescription",
         desc: "Powered by python, this application is set to revolutionize the medical field with the implementation of voice prescription technology. Using cutting-edge voice recognition capabilities, medical professionals can now generate accurate and tailored prescriptions with remarkable ease by cross-checking with a live medical database within your reigon.",
-        link: "",
+        link: "https://github.com/GajapriyanV/Voice-Prescription-Generator",
     },
     {
         title: "Portfolio V2",
         desc: "Discover my new portfolio website by experiencing a seamless and interactive browsing journey as you explore my projects and skills. Embrace the power of Next.js and Tailwind CSS in this very website you are on right now.",
-        link: "",
+        link: "https://github.com/GajapriyanV/gaja-portfolio",
     },
     {
         title: "LSTM Crypto Forecasting",
         desc: "Utilizing Long-Short-Term Memory (LSTM) networks, the application powered by tensorflow and Pandas harnesses real-time trends and forecasts in the cryptocurrency market to predict the following-day price of various cryptocurrencies.Embrace the power of LSTM networks as we lead the way towards a more predictive and profitable future in cryptocurrency trading.",
-        link: "",
+        link: "https://github.com/GajapriyanV/Bitcoin-Price-Predictor",
     },
     {
         title: "Quicktype",
         desc: "An exceptional typing practice application that enables users to adjust content difficulty while accurately measuring their typing speed. Tailor your practice sessions to challenge yourself and enhance your typing skills with precision and flexibility.",
-        link: "",
+        link: "https://github.com/GajapriyanV/Typing-Test-Application",
     },
 
     
