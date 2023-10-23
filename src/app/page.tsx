@@ -48,7 +48,7 @@ export default function Home() {
     
       
 
-    <main className=''>
+    <main className='' style={{ overflowX: 'hidden' }}>
       <Main/>
       <div className='w-[90%] md:w-[1165px] mx-auto'>
       <h2 className='text-center md:text-start text-5xl font-bold mb-8' data-aos="fade-up">Experiences</h2>

@@ -43,10 +43,10 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
 
   return (
 
-          <div className='flex flex-col-reverse w-full mx-auto min-h-screen max-h-screen mb-8 relative' data-aos="fade-in">
+          <div className='flex flex-col-reverse w-full mx-auto min-h-screen max-h-screen mb-8 relative' data-aos="fade-in" style={{ overflowX: 'hidden' }}>
           
             
-            <div className='absolute w-full h-full  -z-50'>
+            <div className='absolute w-full h-full'>
               {typewriterVisible && (
               <Particles
                   id="tsparticles"
