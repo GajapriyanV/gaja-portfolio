@@ -121,10 +121,10 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
               />
               )}
             </div>
-            <div className='flex flex-col md:flex-row absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
+            <div className='flex flex-col md:flex-row absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full'>
             {/* This is the Div With My name */}
-            <div className='flex flex-col md:border-r md:pr-5 md:whitespace-nowrap'>
-              <h2 className=' text-center md:text-left text-5xl font-bold mb-2'>Gajapriyan Vigneswaran</h2>
+            <div className='flex flex-2 md:w-1/2 flex-col md:border-r md:pl-16 xl:pl-6'>
+              <h2 className=' text-center md:text-left text-4xl xl:text-5xl font-bold mb-2'>Gajapriyan Vigneswaran</h2>
               <p className={` text-center md:text-start text-m opacity-50 mb-3 md:mb-2 h-7 md:h-5`}>
                 
                 <span>
@@ -171,7 +171,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
               </div>
             </div>
             <Separator className='md:hidden' orientation="horizontal" />
-            <div className='mt-2 md: ml-3 md:w-[550px]'>
+            <div className='mt-2 md: ml-3 flex-1 md:w-1/2'>
               <p className='text-sm opacity-50 text-center md:text-start'> Welcome to my site, Im a passionate developer who specializes in Full Stack  Development, Devops and data science.
               I am currently a second year student  at Carleton University studying Computer Science. I am always exploring new  and enriching techonologies to enhance my work. Learn more about me below! </p>
             </div>   
@@ -179,7 +179,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
             <div className='flex items-center justify-center mb-28 md:mb-15 text-3xl animate-bounce' onClick={() =>
           window.scrollBy({
             left: 0,
-            top: 0.95 * window.innerHeight,
+            top: 0.92 * window.innerHeight,
             behavior: "smooth",
           })
         }>

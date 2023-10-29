@@ -49,8 +49,9 @@ export default function Home() {
       
 
     <main className='' style={{ overflowX: 'hidden' }}>
+      
+      <div className='w-[90%] md:w-10/12 mx-auto'>
       <Main/>
-      <div className='w-[90%] md:w-[1165px] mx-auto'>
       <h2 className='text-center md:text-start text-5xl font-bold mb-8' data-aos="fade-up">Experiences</h2>
         <div className='flex flex-col items-center gap-5 mb-12'>
 
@@ -108,7 +109,7 @@ export default function Home() {
         </div>
         
       </div>
-      <div className='w-[90%] md:w-[1165px] mx-auto mb-10'>
+      <div className='w-[90%] md:w-10/12 mx-auto mb-10'>
         <h2 className='text-center md:text-start text-5xl font-bold mb-10' data-aos="fade-up">Projects</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
           
@@ -129,7 +130,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='w-[90%] md:w-[1165px] mx-auto'>
+      <div className='w-[90%] md:w-10/12 mx-auto'>
         
           <div className='flex items-center justify-between w-full pb-12 border-t opacity-50 pt-6'>
             <p className='text-sm'> © Gajapriyan Vigneswaran 2023</p>
