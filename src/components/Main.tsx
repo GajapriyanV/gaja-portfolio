@@ -121,9 +121,9 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
               />
               )}
             </div>
-            <div className='flex flex-col md:flex-row absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full'>
+            <div className='flex flex-col md:flex-row absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full 2xl:px-7 3xl:px-16'>
             {/* This is the Div With My name */}
-            <div className='flex flex-2 md:w-1/2 flex-col md:border-r md:pl-16 xl:pl-6'>
+            <div className='flex flex-2 md:w-1/2 flex-col md:border-r'>
               <h2 className=' text-center md:text-left text-4xl xl:text-5xl font-bold mb-2'>Gajapriyan Vigneswaran</h2>
               <p className={` text-center md:text-start text-m opacity-50 mb-3 md:mb-2 h-7 md:h-5`}>
                 
@@ -146,7 +146,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                 )}
                 </span>
               </p>
-              <div className="flex h-5 items-center  space-x-4 md:text-sm justify-center md:justify-start mb-2">
+              <div className="flex h-5 items-center space-x-4 md:text-sm justify-center md:justify-start mb-2">
     <Link href="/your-resume-page">
     <div className="relative cursor-pointer group">
     <span className="hover:underline">Resume</span>
