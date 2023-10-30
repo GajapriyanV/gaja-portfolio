@@ -121,7 +121,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
               />
               )}
             </div>
-            <div className='flex flex-col md:flex-row absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full xl:px-6 2xl:px-44'>
+            <div className='flex flex-col md:flex-row absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-full xl:px-6 3xl:px-44'>
             {/* This is the Div With My name */}
             <div className='flex flex-2 md:w-1/2 flex-col md:border-r'>
               <h2 className=' text-center md:text-left text-4xl xl:text-5xl font-bold mb-2'>Gajapriyan Vigneswaran</h2>

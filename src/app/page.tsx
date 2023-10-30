@@ -50,7 +50,7 @@ export default function Home() {
 
     <main className='' style={{ overflowX: 'hidden' }}>
       
-      <div className='w-[90%] md:w-10/12 2xl:w-10/12 mx-auto'>
+      <div className='w-[90%] md:w-10/12 mx-auto'>
       <Main/>
       <h2 className='text-center md:text-start text-5xl font-bold mb-8' data-aos="fade-up">Experiences</h2>
         <div className='flex flex-col items-center gap-5 mb-12'>
