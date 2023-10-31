@@ -147,7 +147,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                 </span>
               </p>
               <div className="flex h-5 items-center space-x-4 md:text-sm justify-center md:justify-start mb-2">
-    <Link href="/your-resume-page">
+    <Link href="https://docs.google.com/document/d/1JBqn4ivQkHdQMTKvh2TFADv0uJEGRImVcELlwnAuv2c/edit?usp=sharing">
     <div className="relative cursor-pointer group">
     <span className="hover:underline">Resume</span>
     <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
