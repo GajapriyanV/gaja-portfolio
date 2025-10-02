@@ -39,6 +39,7 @@
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.5"
+    "@types/aos": "^3.0.5",
+    "browserslist": "^4.26.3"
   }
 }

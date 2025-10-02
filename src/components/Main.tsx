@@ -172,7 +172,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
             </div>
             <Separator className='md:hidden' orientation="horizontal" />
             <div className='mt-2 md: ml-3 flex-1 md:w-1/2'>
-              <p className='text-sm opacity-50 text-center md:text-start'> Welcome to my site! I'm a passionate developer specializing in full-stack, cloud security, and DevOps. I'm a Computer Science student at Carleton University with strong academic and industry experience. Always exploring new tech and building ambitious projects. Learn more about me below! </p>
+              <p className='text-sm opacity-50 text-center md:text-start'> Welcome to my site! I&apos;m a passionate developer specializing in full-stack, cloud security, and DevOps. I&apos;m a Computer Science student at Carleton University with strong academic and industry experience. Always exploring new tech and building ambitious projects. Learn more about me below! </p>
             </div>   
             </div>
             <div className='flex items-center justify-center mb-28 md:mb-15 text-3xl animate-bounce' onClick={() =>
