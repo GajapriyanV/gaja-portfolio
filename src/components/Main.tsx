@@ -147,7 +147,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                 </span>
               </p>
               <div className="flex h-5 items-center space-x-4 md:text-sm justify-center md:justify-start mb-2">
-    <Link href="https://docs.google.com/document/d/1JBqn4ivQkHdQMTKvh2TFADv0uJEGRImVcELlwnAuv2c/edit?usp=sharing">
+    <Link href="/assets/Gajapriyan_Final_Resume (4).pdf" target="_blank">
     <div className="relative cursor-pointer group">
     <span className="hover:underline">Resume</span>
     <span className="line bg-black w-0 h-1 absolute bottom-0 left-0 transition-width ease-in-out duration-500 group-hover:w-full"></span>
@@ -172,8 +172,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
             </div>
             <Separator className='md:hidden' orientation="horizontal" />
             <div className='mt-2 md: ml-3 flex-1 md:w-1/2'>
-              <p className='text-sm opacity-50 text-center md:text-start'> Welcome to my site, Im a passionate developer who specializes in Full Stack  Development, Devops and data science.
-              I am currently a second year student  at Carleton University studying Computer Science. I am always exploring new  and enriching techonologies to enhance my work. Learn more about me below! </p>
+              <p className='text-sm opacity-50 text-center md:text-start'> Welcome to my site! I'm a passionate developer specializing in full-stack, cloud security, and DevOps. I'm a Computer Science student at Carleton University with strong academic and industry experience. Always exploring new tech and building ambitious projects. Learn more about me below! </p>
             </div>   
             </div>
             <div className='flex items-center justify-center mb-28 md:mb-15 text-3xl animate-bounce' onClick={() =>

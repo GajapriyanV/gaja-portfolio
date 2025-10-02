@@ -10,18 +10,18 @@ export const typewriterText = [
 
 export const experiences = [
     {
-        date: "May 2022 - August 2022",
-        logo: "/assets/gaotek.png",
-        company: "GAOTek Inc.",
-        role: "Software Engineer Intern",
-        desc: "Contributed to events management software, developer experience platform, and backend admin platforms. Supported troubleshooting and worked on embedded systems using C, C++, Java, and Python in various capacities. Designed and developed robust platforms that facilitated seamless data management and efficient operations. My expertise in crafting scalable solutions enabled us to handle large volumes of critical data while ensuring data integrity and system reliability.",
+        date: "May 2025 - August 2025",
+        logo: "/assets/rbc1.png",
+        company: "Royal Bank of Canada",
+        role: "Security DevOps Engineer Intern",
+        desc: "Designed and implemented a Spring Boot batch job to aggregate and classify SCA vulnerability scans across 50+ applications, generating automated exemptions to prevent false-positive deployment flags in Aqua. Leveraged Redis caching, integrated with Kubernetes for scalable execution, and monitored job performance with Prometheus and Grafana, reducing false deployment blocks by 85% and accelerating vulnerability processing by 60%. Developed a secure GitHub Actions workflow to automate Azure Service Principal secret rotation for 30+ applications, integrating HashiCorp Vault for secure secret storage and leveraging OpenShift to orchestrate pod restarts. Maintained ServiceNow Change Management records to ensure compliance and traceability of all deployments, reducing manual credential rotation tickets by 90% across multiple teams. Reduced node resource waste by 40% by right-sizing pods in OpenShift through implementing Vertical Pod Autoscalers (VPA) and auditing CPU/memory requests using kube-state-metrics and Prometheus rules.",
     },
     {
-        date: "February 2022 - May 2022",
-        logo: "/assets/digitera.png",
-        company: "Digitera Interactive",
-        role: "Full-Stack Developer Intern",
-        desc: "As the lead developer, I spearheaded the successful development of the Prom Planner application's dashboard, harnessing the power of HTML, CSS, Javascript, PHP, VueJS, NodeJS and Mongo DB. My adept utilization of these advanced technologies resulted in an exceptionally user-friendly and sophisticated platform, empowering prom planners to effortlessly manage their activities and track transactions.",
+        date: "May 2024 - December 2025",
+        logo: "/assets/rbc1.png",
+        company: "Royal Bank of Canada",
+        role: "Backend Engineer Intern",
+        desc: "Developed scalable Spring Boot compliance reporting APIs with JPA-based data aggregation, reducing manual report generation time by 40% and enhancing regulatory adherence across RBC Capital Markets. Implemented K6 performance testing and chaos engineering workflows with Gremlin in Jenkins and GitHub Actions deployments, uncovering vulnerabilities and reducing OCP resource usage by 50% for key applications. Engineered a Spring Boot-based certificate directory API that streamlined secure certificate lifecycle operations including retrieval, renewal, and revocation, enhancing system compliance visibility by 25%.",
     },
     {
         date: "February 2022 - Present",
@@ -29,13 +29,6 @@ export const experiences = [
         company: "Inertia",
         role: "Co-Founder/Developer",
         desc: "As a co-founder of Inertia, I held the positions of Lead Developer and Technical Product Manager. Responsibilities included leading development, designing and implementing software products and systems, and overseeing website development. I also managed marketing and branding initiatives across various channels.",
-    },
-    {
-        date: "November 2021 - January 2022",
-        logo: "/assets/annamalai.png",
-        company: "Annamalai",
-        role: "Front-End Developer",
-        desc: "Utilized cutting edge technology to develop the frontend using Next.js, a powerful framework, to create captivating user interfaces and ensure seamless user experiences. Interactive elements were skillfully incorporated, and page load times were optimized to enhance user engagement and satisfaction. Simultaneously, designed the database schema and implementing efficient data storage and retrieval mechanisms, resulting in a smooth and responsive backend operation.  ",
     },
     {
         date: "January 2021 - March 2022",
@@ -49,20 +42,19 @@ export const experiences = [
 
 export const projects = [
     {
-        title: "HireMe",
-        desc: "A full-stack application marketplace, where customers can conveniently sign in and access a wide array of job listings from skilled entrepreneurs. Engage in seamless communication with the entrepreneurs to ensure your specific needs are met. Plus, experience the convenience of making payments for the services, all within a single application",
-        link: "https://github.com/GajapriyanV?tab=repositories",
-    },
-
-    {
-        title: "ArtifyAI",
-        desc: "Compose thought-provoking prompts, and witness OpenAI's cutting-edge algorithms bring your ideas to life with mesmerizing AI-generated drawings. Share your work and dive into the community section to browse an abundance of AI-powered artworks",
+        title: "6ixFlow",
+        desc: "Developed an AI-driven Traffic Hotspot platform using Toronto open data, scikit-learn, and geospatial visualization. Engineered pipelines to aggregate multi-year vehicle, cyclist, and pedestrian counts, trained Random Forest models to forecast congestion by time and location, and built an interactive map UI for real-time urban mobility insights.",
         link: "https://github.com/GajapriyanV?tab=repositories",
     },
     {
-        title: "LiveNote",
-        desc: "An all-inclusive application employing Redux, RTK Query, Authentication, and JWT web tokens to empower employees and admins with seamless login and full control over CRUD operations. Efficiently manage incoming order tickets and customer information through a unified platform.",
-        link: "https://github.com/GajapriyanV/LiveNotes",
+        title: "CourseCraft",
+        desc: "An AI-driven platform that simplifies course creation by ingeniously generating comprehensive educational roadmaps from simple prompts. This innovative tool facilitates the construction of structured learning journeys, complete with video content and knowledge assessment, streamlining the educational process.",
+        link: "https://github.com/GajapriyanV?tab=repositories",
+    },
+    {
+        title: "SpectraHunter Simulation",
+        desc: "A program that emulates a networked communication system for ghost hunts. It dynamically simulates interconnected rooms where four hunters, equipped with devices, collect evidence. Replicating scenarios where encounters with ghosts heighten fear levels.",
+        link: "https://github.com/GajapriyanV?tab=repositories",
     },
     {
         title: "GoTrainer",
