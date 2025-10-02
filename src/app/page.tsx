@@ -75,7 +75,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className='font-semibold md:text-xl text-start'>{experience.company}</p>
-                    <p className='md:hidden opacity-50 text-m'>{experience.role}</p>
+                    <p className='md:hidden opacity-50 text-m text-left'>{experience.role}</p>
                     
                   </div>
                   
